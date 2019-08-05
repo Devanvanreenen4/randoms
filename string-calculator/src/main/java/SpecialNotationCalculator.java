@@ -1,12 +1,12 @@
 public class SpecialNotationCalculator {
 
     public int calculate(String specialNotation) {
-        if ("5 6 +".equalsIgnoreCase(specialNotation)) {
-            return 11;
-        }
 
-        if ("1 1 +".equalsIgnoreCase(specialNotation)) {
-            return 2;
+        String[] split = specialNotation.split("\\s");
+        for (String s : split) {
+            if ("+".equalsIgnoreCase(s)) {
+                return Integer.valueOf(split[0]) + Integer.valueOf(split[1]);
+            }
         }
 
         return 0;
