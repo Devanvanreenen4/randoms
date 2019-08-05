@@ -4,6 +4,7 @@ public class SpecialNotationCalculator {
 
         String[] split = specialNotation.split("\\s");
         for (String s : split) {
+
             if ("+".equalsIgnoreCase(s)) {
                 return Integer.valueOf(split[0]) + Integer.valueOf(split[1]);
             }
@@ -12,9 +13,10 @@ public class SpecialNotationCalculator {
                 return Integer.valueOf(split[0]) - Integer.valueOf(split[1]);
             }
 
+            if ("x".equalsIgnoreCase(s)) {
+                return Integer.valueOf(split[0]) * Integer.valueOf(split[1]);
+            }
         }
-
         return 0;
-
     }
 }

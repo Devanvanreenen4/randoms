@@ -28,5 +28,11 @@ public class SpecialNotationCalculatorTest {
         assertThat(calculator.calculate("1 2 -"), is(-1));
     }
 
+    @Test
+    public void shouldMultiplyTwoNumbers() {
+        assertThat(calculator.calculate("2 1 x"), is(2));
+        assertThat(calculator.calculate("5 5 x"), is(25));
+    }
+
 
 }
