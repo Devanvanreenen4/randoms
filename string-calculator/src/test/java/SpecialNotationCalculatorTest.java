@@ -15,4 +15,13 @@ public class SpecialNotationCalculatorTest {
 
 
     }
+
+    @Test
+    public void shouldSubtractTwoNumbers() {
+        SpecialNotationCalculator calculator = new SpecialNotationCalculator();
+        assertThat(calculator.calculate("2 1 -"), is(1));
+        assertThat(calculator.calculate("1 2 -"), is(-1));
+    }
+
+
 }

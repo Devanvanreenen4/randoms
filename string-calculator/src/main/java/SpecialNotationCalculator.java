@@ -7,6 +7,11 @@ public class SpecialNotationCalculator {
             if ("+".equalsIgnoreCase(s)) {
                 return Integer.valueOf(split[0]) + Integer.valueOf(split[1]);
             }
+
+            if ("-".equalsIgnoreCase(s)) {
+                return Integer.valueOf(split[0]) - Integer.valueOf(split[1]);
+            }
+
         }
 
         return 0;
