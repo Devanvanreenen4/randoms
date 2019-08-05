@@ -1,9 +1,5 @@
 public class SpecialNotationCalculator {
 
-    public void execute() {
-
-    }
-
     public int calculate(String specialNotation) {
         if ("5 6 +".equalsIgnoreCase(specialNotation)) {
             return 11;
