@@ -11,8 +11,7 @@ public class SpecialNotationCalculatorTest {
     @Test
     public void shouldCalculateUsingInput() {
         SpecialNotationCalculator calculator = new SpecialNotationCalculator();
-        int result = calculator.calculate("5 6 +");
-        assertThat(result, is(11));
+        assertThat(calculator.calculate("5 6 +"), is(11));
 
     }
 }
