@@ -48,5 +48,10 @@ public class SpecialNotationCalculatorTest {
         assertThat(calculator.calculate("10 7 %"), is(3));
     }
 
+    @Test
+    public void shouldProcessInputWithMultipleOperations() {
+        assertThat(calculator.calculate("2 1 0 + -"), is(1));
+    }
+
 
 }
