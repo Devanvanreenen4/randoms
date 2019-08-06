@@ -5,6 +5,9 @@ import za.co.assessment.calculator.model.Operation;
 import za.co.assessment.calculator.model.Operator;
 import za.co.assessment.calculator.model.SecondOperand;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SpecialNotationCalculator {
 
     public int calculate(String specialNotation) {
@@ -17,17 +20,21 @@ public class SpecialNotationCalculator {
             Operation operation = new Operation(firstOperand, secondOperand, operator);
             return operation.operate();
         } else {
-            return processMultipleOperations(specialNotationElements);
+            return processMultipleOperations(specialNotation);
         }
-
     }
 
-    private int processMultipleOperations(String[] specialNotationElements) {
-        if (specialNotationElements.length > 3) {
-            Operation operation1 = new Operation(new FirstOperand(1), new SecondOperand(0), new Operator("+"));
-            Operation operation2 = new Operation(new FirstOperand(2), new SecondOperand(operation1.operate()), new Operator("-"));
-            return operation2.operate();
+    private int processMultipleOperations(String specialNotation) {
+        String pattern = "\\d\\s\\d\\s[+]";
+        Pattern r = Pattern.compile(pattern);
+        Matcher m = r.matcher(specialNotation);
+        StringBuffer sb = new StringBuffer();
+        while (m.find()) {
+            m.appendReplacement(sb, m.group(0).replaceFirst(Pattern.quote(m.group(0)), String.valueOf(calculate(m.group(0)))));
         }
-        return 0;
+        m.appendTail(sb);
+        return calculate(sb.toString());
     }
+
+
 }

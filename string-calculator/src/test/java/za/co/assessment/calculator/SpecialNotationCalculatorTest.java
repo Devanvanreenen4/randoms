@@ -50,7 +50,7 @@ public class SpecialNotationCalculatorTest {
 
     @Test
     public void shouldProcessInputWithMultipleOperations() {
-        assertThat(calculator.calculate("2 1 0 + -"), is(1));
+        assertThat(calculator.calculate("3 1 0 + +"), is(4));
     }
 
 
