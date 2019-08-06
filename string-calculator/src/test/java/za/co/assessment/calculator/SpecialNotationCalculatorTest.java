@@ -1,5 +1,8 @@
+package za.co.assessment.calculator;
+
 import org.junit.Before;
 import org.junit.Test;
+import za.co.assessment.calculator.application.SpecialNotationCalculator;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -37,6 +40,12 @@ public class SpecialNotationCalculatorTest {
     public void shouldDivideTwoNumbers() {
         assertThat(calculator.calculate("10 2 /"), is(5));
         assertThat(calculator.calculate("100 10 /"), is(10));
+    }
+
+    @Test
+    public void shouldModuloTwoNumbers() {
+        assertThat(calculator.calculate("10 3 %"), is(1));
+        assertThat(calculator.calculate("10 7 %"), is(3));
     }
 
 

@@ -1,3 +1,10 @@
+package za.co.assessment.calculator.application;
+
+import za.co.assessment.calculator.model.FirstOperand;
+import za.co.assessment.calculator.model.Operation;
+import za.co.assessment.calculator.model.Operator;
+import za.co.assessment.calculator.model.SecondOperand;
+
 public class SpecialNotationCalculator {
 
     public int calculate(String specialNotation) {

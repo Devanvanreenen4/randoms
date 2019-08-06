@@ -1,3 +1,5 @@
+package za.co.assessment.calculator.model;
+
 public class Operation {
 
     private FirstOperand firstOperand;
@@ -28,6 +30,11 @@ public class Operation {
         if ("/".equalsIgnoreCase(this.operator.getValue())) {
             result = this.firstOperand.getValue() / this.secondOperand.getValue();
         }
+
+        if ("%".equalsIgnoreCase(this.operator.getValue())) {
+            result = this.firstOperand.getValue() % this.secondOperand.getValue();
+        }
+
         return result;
     }
 }

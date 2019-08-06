@@ -1,3 +1,5 @@
+package za.co.assessment.calculator.model;
+
 public class SecondOperand {
 
     private final int value;

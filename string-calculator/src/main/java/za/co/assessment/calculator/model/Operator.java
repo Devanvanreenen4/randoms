@@ -1,3 +1,5 @@
+package za.co.assessment.calculator.model;
+
 public class Operator {
 
     private final String value;
