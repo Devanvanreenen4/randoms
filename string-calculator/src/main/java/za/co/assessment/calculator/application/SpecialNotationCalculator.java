@@ -25,7 +25,7 @@ public class SpecialNotationCalculator {
     }
 
     private int processMultipleOperations(String specialNotation) {
-        String pattern = "\\d\\s\\d\\s[+]";
+        String pattern = "\\d\\s\\d\\s\\D";
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(specialNotation);
         StringBuffer sb = new StringBuffer();
