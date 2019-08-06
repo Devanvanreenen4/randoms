@@ -19,7 +19,6 @@ public class SpecialNotationCalculatorTest {
         assertThat(calculator.calculate("1 1 +"), is(2));
         assertThat(calculator.calculate("1 2 +"), is(3));
         assertThat(calculator.calculate("100 200 +"), is(300));
-
     }
 
     @Test
@@ -32,6 +31,12 @@ public class SpecialNotationCalculatorTest {
     public void shouldMultiplyTwoNumbers() {
         assertThat(calculator.calculate("2 1 x"), is(2));
         assertThat(calculator.calculate("5 5 x"), is(25));
+    }
+
+    @Test
+    public void shouldDivideTwoNumbers() {
+        assertThat(calculator.calculate("10 2 /"), is(5));
+        assertThat(calculator.calculate("100 10 /"), is(10));
     }
 
 

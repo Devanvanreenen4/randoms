@@ -3,20 +3,11 @@ public class SpecialNotationCalculator {
     public int calculate(String specialNotation) {
 
         String[] split = specialNotation.split("\\s");
-        for (String s : split) {
+        FirstOperand firstOperand = new FirstOperand(Integer.valueOf(split[0]));
+        SecondOperand secondOperand = new SecondOperand(Integer.valueOf(split[1]));
+        Operator operator = new Operator(split[2]);
+        Operation operation = new Operation(firstOperand, secondOperand, operator);
+        return operation.operate();
 
-            if ("+".equalsIgnoreCase(s)) {
-                return Integer.valueOf(split[0]) + Integer.valueOf(split[1]);
-            }
-
-            if ("-".equalsIgnoreCase(s)) {
-                return Integer.valueOf(split[0]) - Integer.valueOf(split[1]);
-            }
-
-            if ("x".equalsIgnoreCase(s)) {
-                return Integer.valueOf(split[0]) * Integer.valueOf(split[1]);
-            }
-        }
-        return 0;
     }
 }
