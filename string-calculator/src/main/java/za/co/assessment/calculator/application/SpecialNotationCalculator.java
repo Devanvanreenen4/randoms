@@ -24,17 +24,9 @@ public class SpecialNotationCalculator {
 
     private int processMultipleOperations(String[] specialNotationElements) {
         if (specialNotationElements.length > 3) {
-            //create operation #1
-            FirstOperand firstOperand = new FirstOperand(1);
-            SecondOperand secondOperand = new SecondOperand(0);
-            Operator operator = new Operator("-");
-            Operation operation = new Operation(firstOperand, secondOperand, operator);
-            //result of first operation now becomes second operand for new operation
-            secondOperand = new SecondOperand(operation.operate());
-            firstOperand = new FirstOperand(2);
-            //create operation #2
-            operation = new Operation(firstOperand, secondOperand, new Operator("-"));
-            return operation.operate();
+            Operation operation1 = new Operation(new FirstOperand(1), new SecondOperand(0), new Operator("+"));
+            Operation operation2 = new Operation(new FirstOperand(2), new SecondOperand(operation1.operate()), new Operator("-"));
+            return operation2.operate();
         }
         return 0;
     }
