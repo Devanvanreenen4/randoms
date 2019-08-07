@@ -53,6 +53,10 @@ public class SpecialNotationCalculatorTest {
         assertThat(calculator.calculate("3 1 0 + +"), is(4));
         assertThat(calculator.calculate("2 1 0 + -"), is(1));
         assertThat(calculator.calculate("3 4 5 x -"), is(-17));
+        assertThat(calculator.calculate("1 1 1 1 + + +"), is(4));
+        assertThat(calculator.calculate("1 1 1 1 + + +"), is(4));
+        assertThat(calculator.calculate("3 4 - 5 x"), is(-5));
+        assertThat(calculator.calculate("10 5 2 2 + - / 4 x 2 1 1 + + -"), is(36));
     }
 
 
