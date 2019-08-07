@@ -1,4 +1,4 @@
-# randoms
+# Special Notation String Calculator
 <b>Introduction</b>
 
 This project is an attempt to solve the below problem. A test driven development approach was used in order to work towards a solution. There is a basic model within the project that was introduced to start modelling a solution. 
