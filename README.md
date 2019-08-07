@@ -4,8 +4,9 @@
 This project is an attempt to solve the below problem. A test driven development approach was used in order to work towards a solution. There is a basic model within the project that was introduced to start modelling a solution. 
 
 Finding the solution was time boxed to approx 3 hours and therefore not all aspects of the problem was solved, these include:-
-Refactor the calculator to allow specifying the operators as words for example  5 6 + is passed to the program as 5 6 Add and 5 6 - 7 + is passed as 5 6 Subtract 7 Add.
-The calculator should support the following operator Factorial (!)
+-Refactor the calculator to allow specifying the operators as words for example  5 6 + is passed to the program as 5 6 Add and 5 6 - 7 + is passed as 5 6 Subtract 7 Add.
+-The calculator should support the following operator Factorial (!)
+-More focus on the model
 
 
 <b>Problem - Calculator special notation</b>
