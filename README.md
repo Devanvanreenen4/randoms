@@ -23,11 +23,11 @@ Examples
 
 The examples below are in the following format,  special notation = conventional notation = result
 
-1 1 +   =   1+1   =  2
-2 1 1 + -   =  2 - (1 + 1)  =  0
-3 4 5 x -  =  3 - (4 x 5)  =  -17
-3 4 - 5 x  =  (3 - 4) x 5  =  -5
-10 5 2 2 + - / 4 x 2 1 1 + + -   =   ((10 / (5 - (2 + 2))) x 4) - (2+(1+1))   =   36
+1 1 +   =   1+1   =  2 <br />
+2 1 1 + -   =  2 - (1 + 1)  =  0 <br />
+3 4 5 x -  =  3 - (4 x 5)  =  -17 <br />
+3 4 - 5 x  =  (3 - 4) x 5  =  -5 <br />
+10 5 2 2 + - / 4 x 2 1 1 + + -   =   ((10 / (5 - (2 + 2))) x 4) - (2+(1+1))   =   36 <br />
  
 
 - The calculator should support the following operators Add (+), Subtract (-), Multiply (x),  Divide (/) , Modulus (%) and Factorial (!)
